@@ -2,6 +2,8 @@ class CameraWorker
   include Sidekiq::Worker
 
   def perform
+    logger.info "Things are happening."
+    logger.debug "Here's some info: #{hash.inspect}"
     @http_conn = Faraday.new do |builder|
       builder.adapter Faraday.default_adapter
     end
