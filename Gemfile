@@ -38,6 +38,7 @@ gem 'rails_12factor', group: :production
 gem 'sidekiq'
 gem 'faraday'
 gem 'sinatra', :require => nil
+gem 'newrelic_rpm'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
