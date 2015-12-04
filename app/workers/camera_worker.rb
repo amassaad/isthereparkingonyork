@@ -4,6 +4,7 @@ class CameraWorker
   def perform
     logger.info "Things are happening."
     logger.debug "Here's some info: #{hash.inspect}"
+    #todo with s3 support
     @http_conn = Faraday.new do |builder|
       builder.adapter Faraday.default_adapter
     end
