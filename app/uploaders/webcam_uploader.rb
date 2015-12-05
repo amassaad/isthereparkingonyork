@@ -5,7 +5,7 @@ class WebcamUploader < CarrierWave::Uploader::Base
   if Rails.env.production?
     storage :fog
   elsif Rails.env.development?
-    config.storage :file
+    storage :file
   end
 
   # Include RMagick or MiniMagick support:
