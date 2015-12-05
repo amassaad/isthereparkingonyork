@@ -1,4 +1,6 @@
-== README
+# README
+
+[ ![Codeship Status for amassaad/isthereparkingonyork](https://codeship.com/projects/de91fde0-7db1-0133-c6e4-6a5cc34fb59d/status?branch=master)](https://codeship.com/projects/120227)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
