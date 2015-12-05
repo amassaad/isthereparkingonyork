@@ -1,10 +1,11 @@
 CarrierWave.configure do |config|
-  config.fog_provider = 'fog/aws'                        # required
+  config.fog_provider = 'fog'                        # required
   config.fog_credentials = {
-    provider:              'AWS',                        # required
-    aws_access_key_id:     ENV['PARKING_KEY'],                        # required
-    aws_secret_access_key: ENV['PARKING_ID'],
-    region:                'us-west-2'                           # required
+    provider:               'AWS',
+    region:                 'us-west-1',                        # required
+    aws_access_key_id:      ENV['PARKING_ID'],                        # required
+    aws_secret_access_key:  ENV['PARKING_KEY']
   }
-  config.fog_directory  = 'yorkparking'                          # required
+  config.fog_public = true
+  config.fog_directory  = 'york-parking-bucket'                          # required
 end

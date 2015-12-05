@@ -36,11 +36,12 @@ gem 'puma'
 gem 'rails_12factor', group: :production
 
 gem 'sidekiq'
+gem 'sidekiq-throttler'
 gem 'faraday'
 gem 'sinatra', :require => nil
 gem 'newrelic_rpm'
-gem 'carrierwave'
-gem 'fog-aws'
+gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
+gem 'fog'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

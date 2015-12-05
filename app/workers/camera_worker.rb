@@ -1,22 +1,27 @@
 class CameraWorker
   include Sidekiq::Worker
 
-  def perform
-    logger.info "Things are happening in the cameara loader."
-    #todo with s3 support
+  sidekiq_options throttle: { threshold: 2, period: 1.minute }
+
+  def perform(id)
+    @u = ENV['SECURE_USER']
+    @p = ENV['SECURE_PASS']
+    logger.info "Things are starting to happen in the camera worker job."
+
     @http_conn = Faraday.new do |builder|
       builder.adapter Faraday.default_adapter
     end
-    @u = ENV['SECURE_USER']
-    @p = ENV['SECURE_PASS']
 
     @http_conn.basic_auth(@u, @p)  unless @u.nil? && @p.nil?
     response = @http_conn.get 'http://webcam.zzv.ca:1394/snapshot.cgi'
-    logger.info "Trying to make save happen. With success?"
+    logger.info "Trying to make save happen. With success? [status code: #{response.status}]"
 
-    WebcamUploader.new.store!(response.body)
+    File.open("tmp/york.jpg", "wb") { |fp| fp.write(response.body) }
+    file = File.open("tmp/york.jpg")
 
-    logger.info "Saved file. With success?"
-    # File.open("public/york.jpg", "wb") { |fp| fp.write(response.body) }
+    uploader = WebcamUploader.new
+    uploader.store!(file)
+
+    logger.info "Saved file. maybe."
   end
 end
