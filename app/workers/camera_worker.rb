@@ -8,8 +8,8 @@ class CameraWorker
     @http_conn = Faraday.new do |builder|
       builder.adapter Faraday.default_adapter
     end
-    @u = "alex"
-    @p = "testing"
+    @u = ENV['SECURE_USER']
+    @p = ENV['SECURE_PASS']
 
     @http_conn.basic_auth(@u, @p)  unless @u.nil? && @p.nil?
     response = @http_conn.get 'http://webcam.zzv.ca:1394/snapshot.cgi'
