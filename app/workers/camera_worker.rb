@@ -21,7 +21,5 @@ class CameraWorker
 
     uploader = WebcamUploader.new
     uploader.store!(file)
-
-    logger.info "Saved file. maybe."
   end
 end
