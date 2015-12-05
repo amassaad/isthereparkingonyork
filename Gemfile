@@ -4,7 +4,7 @@ ruby "2.2.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
-gem 'pg'
+# gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -36,9 +36,12 @@ gem 'puma'
 gem 'rails_12factor', group: :production
 
 gem 'sidekiq'
+gem 'sidekiq-throttler'
 gem 'faraday'
 gem 'sinatra', :require => nil
 gem 'newrelic_rpm'
+gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
+gem 'fog'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -51,6 +54,6 @@ group :development, :test do
   gem 'spring'
 
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  # gem 'sqlite3'
 end
 
