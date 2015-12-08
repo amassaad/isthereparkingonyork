@@ -1,5 +1,5 @@
 class ParkingController < ApplicationController
   def check
-    CameraWorker.perform_async(1)
+    CameraImageWorker.perform_async(1)
   end
 end

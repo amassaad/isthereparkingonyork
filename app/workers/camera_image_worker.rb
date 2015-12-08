@@ -1,4 +1,4 @@
-class CameraWorker
+class CameraImageWorker
   include Sidekiq::Worker
 
   sidekiq_options throttle: { threshold: 5, period: 10.minute }
@@ -6,7 +6,7 @@ class CameraWorker
   def perform(id)
     @u = ENV['SECURE_USER']
     @p = ENV['SECURE_PASS']
-    logger.info "Things are starting to happen in the camera worker job."
+    logger.info "Things are starting to happen in the camera Image worker job."
 
     @http_conn = Faraday.new do |builder|
       builder.adapter Faraday.default_adapter

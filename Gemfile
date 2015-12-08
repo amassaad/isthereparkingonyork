@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.2.3"
+ruby '2.2.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -28,16 +28,14 @@ gem 'newrelic_rpm'
 
 gem 'sidekiq'
 gem 'sidekiq-throttler'
-gem 'faraday'
 gem 'sinatra', :require => nil
+gem 'faraday'
 gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'fog'
 
 group :development, :test do
   gem 'byebug'
-
   gem 'web-console', '~> 2.0'
-
   gem 'spring'
 end
 
