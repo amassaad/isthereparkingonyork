@@ -12,12 +12,16 @@ class CameraImageWorker
       builder.adapter Faraday.default_adapter
     end
 
-    @http_conn.basic_auth(@u, @p)  unless @u.nil? && @p.nil?
+    @http_conn.basic_auth(@u, @p)
     response = @http_conn.get 'http://webcam.zzv.ca:1394/snapshot.cgi'
     logger.info "Trying to make save happen. With success? [status code: #{response.status}]"
 
     File.open("tmp/york.jpg", "wb") { |fp| fp.write(response.body) }
     file = File.open("tmp/york.jpg")
+
+
+        # response = @connection.get('snapshot.cgi')
+        # response.success? ? ::MiniMagick::Image.read(response.body) : nil
 
     uploader = WebcamUploader.new
     uploader.store!(file)
