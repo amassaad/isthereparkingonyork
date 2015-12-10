@@ -1,3 +1,4 @@
+namespace :camera_positioner do
   desc "Turn off the IR LEDs"
   task no_ir: :environment do
     CameraSettingsWorker.perform_async(1)
