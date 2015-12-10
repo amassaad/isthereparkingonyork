@@ -1,4 +1,4 @@
-class CameraImageWorker
+class CameraSettingsWorker
   include Sidekiq::Worker
 
   def perform(task)
