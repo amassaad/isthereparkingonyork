@@ -33,7 +33,7 @@ gem 'faraday'
 gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'fog'
 
-group :development, :test do
+group :development do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
