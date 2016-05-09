@@ -11,7 +11,7 @@ class CameraSettingsWorker
       end
       @http_conn.basic_auth(@u, @p)
 
-      @http_conn.get("http://webcam.zzv.ca:1394/decoder_control.cgi?command=94")
+      @http_conn.get("http://york.zzv.ca:1394/decoder_control.cgi?command=94")
     when 2
       @u = ENV['SECURE_USER']
       @p = ENV['SECURE_PASS']
@@ -20,7 +20,7 @@ class CameraSettingsWorker
       end
       @http_conn.basic_auth(@u, @p)
 
-      @http_conn.get('http://webcam.zzv.ca:1394/decoder_control.cgi?command=31')
+      @http_conn.get('http://york.zzv.ca:1394/decoder_control.cgi?command=31')
     end
   end
 end
