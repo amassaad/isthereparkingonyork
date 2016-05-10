@@ -1,7 +1,7 @@
 class CameraImageWorker
   include Sidekiq::Worker
 
-  sidekiq_options throttle: { threshold: 60, period: 60.minute }
+  sidekiq_options throttle: { threshold: 240, period: 60.minute }
 
   def perform(id)
     @u = ENV['SECURE_USER']
