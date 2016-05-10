@@ -13,7 +13,7 @@ class CameraImageWorker
     end
 
     @http_conn.basic_auth(@u, @p)
-    response = @http_conn.get 'http://york.zzv.ca:1394/snapshot.cgi'
+    response = @http_conn.get "http://vpbgqdnmovrogbgprkxdnefdiwqfxhujcchomdnzxtwgxtcppt.zzv.ca:1394/snapshot.cgi"
     logger.info "Trying to make save happen. With success? [status code: #{response.status}]"
 
     File.open("tmp/york.jpg", "wb") { |fp| fp.write(response.body) }
