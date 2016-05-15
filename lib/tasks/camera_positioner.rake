@@ -8,4 +8,9 @@ namespace :camera_positioner do
   task reposition_request: :environment do
     CameraSettingsWorker.perform_async(2)
   end
+
+  desc "Reposition to the second location"
+  task second_position_request: :environment do
+    CameraSettingsWorker.perform_async(3)
+  end
 end
