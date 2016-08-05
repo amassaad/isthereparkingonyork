@@ -5,5 +5,4 @@ class ParkingControllerTest < ActionController::TestCase
     get :check
     assert_response :success
   end
-
 end

@@ -2,29 +2,15 @@
 
 [ ![Codeship Status for amassaad/isthereparkingonyork](https://codeship.com/projects/de91fde0-7db1-0133-c6e4-6a5cc34fb59d/status?branch=master)](https://codeship.com/projects/120227)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails based Foscam camera image getter. It uses a job in the background to update the camera position, and get images without delaying the main thread\s.
 
-Things you may want to cover:
+* Ruby version: `2.3.0`
 
-* Ruby version
+* System dependencies: Foscam camera, probably more? Redis
 
-* System dependencies
+* Configuration: yep
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
+* Database creation: nope!
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
