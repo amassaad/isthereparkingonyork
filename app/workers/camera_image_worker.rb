@@ -7,6 +7,7 @@ class CameraImageWorker
     @u = ENV['SECURE_USER']
     @p = ENV['SECURE_PASS']
     logger.info "Things are starting to happen in the camera Image worker job."
+    StatsD.increment('CameraImageWorker.start')
 
     @http_conn = Faraday.new do |builder|
       builder.adapter Faraday.default_adapter
@@ -25,5 +26,6 @@ class CameraImageWorker
 
     uploader = WebcamUploader.new
     uploader.store!(file)
+    StatsD.increment('CameraImageWorker.complete')
   end
 end
