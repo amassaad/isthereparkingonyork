@@ -7,7 +7,7 @@ gem 'faraday'
 gem 'fog'
 gem 'newrelic_rpm'
 gem 'puma'
-gem 'rails', '~> 4.2'
+gem 'rails', '~> 5.0'
 gem 'rails_12factor', group: :production
 gem 'sass-rails', '~> 5.0'
 gem 'sidekiq'
