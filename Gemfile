@@ -20,3 +20,7 @@ group :development do
   gem 'byebug'
   gem 'spring'
 end
+
+group :test do
+  gem 'minitest-ci'
+end

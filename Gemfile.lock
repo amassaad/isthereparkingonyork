@@ -197,6 +197,8 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
+    minitest-ci (3.1.0)
+      minitest (~> 5.0, >= 5.0.6)
     multi_json (1.12.1)
     multipart-post (2.0.0)
     newrelic_rpm (3.18.1.330)
@@ -292,6 +294,7 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   faraday
   fog
+  minitest-ci
   newrelic_rpm
   puma
   rails (~> 5.0)
