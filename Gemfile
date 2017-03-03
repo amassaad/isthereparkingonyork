@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.4.0'
 
-gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
+gem 'carrierwave', '~> 1.0'
 gem 'faraday'
 gem 'fog'
 gem 'newrelic_rpm'

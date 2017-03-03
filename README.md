@@ -1,12 +1,14 @@
 # README
 
-[ ![Codeship Status for amassaad/isthereparkingonyork](https://codeship.com/projects/de91fde0-7db1-0133-c6e4-6a5cc34fb59d/status?branch=master)](https://codeship.com/projects/120227)
+[![CircleCI](https://circleci.com/gh/amassaad/isthereparkingonyork.svg?style=svg)](https://circleci.com/gh/amassaad/isthereparkingonyork)
 
-This is a Rails based Foscam camera image getter. It uses a job in the background to update the camera position, and get images without delaying the main thread\s.
+This is a Rails-based Foscam camera setter and image getter.
 
-* Ruby version: `2.3.0`
+It uses a job in the background to update the camera position, and get images without delaying the main thread\s. Maybe, I haven't really looked at this code in a while so who knows how it works really.
 
-* System dependencies: Foscam camera, probably more? Redis
+* Ruby version: `2.4.0`
+
+* System dependencies: Foscam camera, probably more? Redis for sure.
 
 * Configuration: yep
 
