@@ -15,11 +15,7 @@ class CameraImageWorker
         builder.adapter Faraday.default_adapter
       end
 
-      # @http_conn.basic_auth(@u, @p)
-
       # response = @http_conn.get "http://site.zzv.ca:1394/snapshot.cgi"
-      #
-      #
       #
       # http://ip address:port/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=admin&pwd=xxx
 
